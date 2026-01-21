@@ -113,3 +113,207 @@
 # B: scene 6
 
 # Consequences: none
+
+
+# Scene 3.1: Base (realized I wanted it eheh)
+
+# Description: descrtiptive presentation of more choices to get evidence after intro ones 
+
+# Where do you go?
+
+# Choices:
+
+# A: The dresser
+# B: The closet
+# C: The entrance
+
+# Outcomes: literally just moving scenes
+
+# Consequences: none
+
+
+# Scene 5: The Young Man
+
+# Description: extended description of bro, dialogue of him explaining what they were doing and that deseacsed was sick
+# comment about circumstances of the deceased leading to the dialogue choices
+
+# Choices:
+
+# A: "It is a shame they all died so recently."
+# B: "He must have been carrying a lot of grief."
+# C: "Thank you for your cooperation."
+
+# Outcomes: both continue dialouge (include comment from partner) and prompt to go back
+
+# Consequences:
+
+# A: plus 1 suspicion
+# B: minus 1 suspicion
+# C: nothing
+
+
+# Scene 6: The Staff Member
+
+# Description: further description of staff member (manager or something), explain what she knows which isn't much
+# comment about hotel security leading to choices
+
+# Choices:
+
+# A: "Security is very important when housing people."
+# B: "The security here does not pose as an obstacle for an intruder."
+# C: "Thank you for your cooperation."
+
+# Outcomes: both continue dialouge (include comment from partner) and prompt to go back
+
+# Consequences:
+
+# A: minus 1 suspicion
+# B: plus 1 suspicion
+# C: nothing
+
+
+# Scene 7: The Dresser
+
+# Description: describe the dresser, glass marked as possible evidence on top of it and some drawers
+# Look closer?
+
+# Choices:
+
+# A: Examine the glass
+# B: Examine the drawers
+# C: Go back
+
+# Outcomes: scene traveling oooOOOOooooOOOOOOoooooooo
+
+# A: scene 7.1
+# B: scene 7.2
+# C: scene 3.1
+
+# Consequences: none
+
+# Scene 7.1: The Glass
+
+# Description: glass smells like [enter poison name here]
+# What will you do?
+
+# Choices:
+
+# A: Take the glass
+# B: Leave the glass
+
+# Outcomes:
+
+# A: you take the glass, put in pocket perhaps, prompt to go back
+# B: you leave the glass, parnter asks about it, prompt to go back
+
+# Consequences:
+
+# A: plus 2 suspiscion, glass in inventory
+# B: nothing
+
+# Scene 7.2: The Drawers
+
+# Description: completely empty except for small ripped piece of paper with "DEAD" written on it
+# What will you do?
+
+# Choices:
+
+# A: Take the paper
+# B: Leave the paper
+
+# Outcomes:
+
+# A: you take the paper, put in pocket, prompt to go back
+# B: you leave the paper, prompt to go back
+
+# Consequences:
+
+# A: paper in inventory
+# B: nothing
+
+
+# Scene 8: The Closet
+
+# Description: bare expect for the hotel safe in the corner
+# Look closer?
+
+# Choices:
+
+# A: Examine the safe
+# B: Go back
+
+# Outcomes:
+
+# A: 8.1
+# B: 3.1
+
+# Consequences: nothing
+
+# Scene 8.1: The Safe
+
+# Description: describe safe, four digit code, yuppity yup yup
+# What will you do?
+
+# Choices:
+
+# A: Enter code
+# B: Go back
+
+# Outcomes:
+
+# A: if paper in inventory, describe paper again and prompt to enter code; else prompt to go back
+# B: scene 8
+
+# Consequences:
+
+# A: if code right, scene 8.2; else say incorrect and prompt enter code again
+# B: nothing
+
+# Scene 8.2: Correct
+
+# Description: inside safe there is a diary/journal with the deceased's name on it, possible evidence
+# What will you do?
+
+# Choices:
+
+# A: Take the diary
+# B: Leave the diary
+
+# Outcomes:
+
+# A: you take the diary, put in pocket, prompt to go back
+# B: you leave the diary, someone from forensics comes over to see if it's evidence, prompt to go back
+
+# Consequences:
+
+# A: plus 2 suspicion
+# B: nothing
+
+
+# Scene 9: Conclusion
+
+# Description: once all scences have been visited, dialogue with partner talking about calling it a day
+# "Ready to head back to the station, lead detective?"
+
+# Choices:
+
+# A: Leave
+# B: Go back
+
+# Outcomes:
+
+# A: win/lose results
+# B: Return to scene 3.1, will now have option to leave
+
+# Consequences: nothing
+
+# Scene 9.1: Win
+
+# Description: suspicion less than 4; leave hotel, summary of following events and verdict on case
+# You got away with it.
+
+# Scene 9.2: Lose
+
+# Description: suspicion greater than or equal to 4; partner stops you before you leave and arrests you under suspicion of
+# involvement in the death of the deceased, accusing you of knowing too much/taking evidence/both
+# You were caught.
