@@ -144,6 +144,8 @@ def room ():
     # B: minus 1 suspicion
     # C: nothing
 
+# I need a way to prompt the base scene but only if all of the previous scenes have been visited how do?????
+
 
 def base ():
 
@@ -476,6 +478,9 @@ def safe ():
     while True:
         choice71 = input("\nWhat do you do? ").upper()
 
+        # how do I write an if statement for something only showing up if item is in inventory even if another item is 
+        # in the inventory how do inventories???
+
         if choice71 == "A":
             #print("write description for the sake of turning the assignment in I will write later")
             code = input("\nEnter code: ")
@@ -619,7 +624,7 @@ def end3 ():
 
     # Description suspicion greater than or equal to 4, inventory has glass and/or diary
 
-    #print("gonna wtite this later hope this is fine for now will try to have it done by next class just can't do it
+    #print("gonna wtite this later hope this is fine for now just can't do it
     # tonight wow this is over 600 lines of code already my goodness and it's just gonna get longer hope it's not too bad
     # reading it all geez")
 
