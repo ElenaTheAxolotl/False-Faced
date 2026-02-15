@@ -1,21 +1,21 @@
 # detective game heheheheheh
 
-suspicion = 0
-inventory = []
 scene_count = 0
 
-# Dictionary ig (Object JSON) I don't think I can use this anywhere rn but good to know
+# Dictionary ig (Object JSON)
 
-# mech1 = {
-#    "type": "flying",
-#    "color": "red",
-#    "hp" = 100
-# }
+player = {
+    "suspicion": 0,
+    "inventory": []
+}
+
+def raise_suspicion(sus):
+    player["suspicion"] = player["suspicion"] + sus
 
 def intro ():
 
     # Scene 1: Intro
-    print(scene_count)
+
     # Description: 
 
     print("\n\nYou stand in the middle of a hotel room, one barely big enough to fit two beds let alone the amount of people currently")
@@ -69,11 +69,13 @@ def intro ():
 
 def body ():
 
+    global scene_count
+
     # Scene 2: The Body
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\nThe deceased is a young man named Lucas Park, a nobody in the grand scheme of things. The file on him you were provided")
     print("with revealed nothing substantial. The only things of note were that he had no known living relatives and had been")
@@ -104,7 +106,7 @@ def body ():
             return intro()
         elif choice2 == "B":
             #print("continue dialouge for the sake of turning the assignment in I will write later")
-            #suspicion +=1
+            raise_suspicion(1)
             input("\nPress Enter to go back")
             return intro()
         elif choice2 == "C":
@@ -129,11 +131,13 @@ def body ():
 
 def room ():
 
+    global scene_count
+
     # Scene 3: The Room
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\n\nLooking around the room, there is not much to see. A few forensics workers are looking for evidence, but the room is")
     print("practically bare, the only furniture being the two beds, a television, and a dresser below the television. There are two")
@@ -156,7 +160,7 @@ def room ():
 
         if choice3 == "A":
             #print("continue dialouge for the sake of turning the assignment in I will write later")
-            #suspicion +=1
+            raise_suspicion(1)
             input("\nPress Enter to go back")
             return intro()
         elif choice3 == "B":
@@ -182,13 +186,11 @@ def room ():
     # B: nothing
     # C: nothing
 
-# I need a way to prompt the base scene but only if all of the previous scenes have been visited how do?????
-
 
 def base ():
 
     # Scene 4: Base only if both body and room have been visited (realized I wanted it after eheh)
-
+    
     # Description:
 
     print("\n\nAfter familiarizing yourself with the who and the where-and dealing with your partner-you start looking for more clues")
@@ -279,11 +281,13 @@ def entrance ():
 
 def entranceA ():
 
+    global scene_count
+
     # Scene 5.1: The Young Man
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\n\nThe young man appears quite distressed about the situation and your presence does not seem to be of any help. The police")
     print("officer tells you the man's name and that he was a friend of the deceased, having been travling with him. Turning to you")
@@ -307,7 +311,7 @@ def entranceA ():
 
         if choice51 == "A":
             #print("continue dialouge for the sake of turning the assignment in I will write later")
-            #suspicion +=1
+            raise_suspicion(1)
             input("\nPress Enter to go back")
             return entrance()
         elif choice51 == "B":
@@ -330,11 +334,13 @@ def entranceA ():
 
 def entranceB ():
 
+    global scene_count
+
     # Scene 5.2: The Staff Member
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\n\nThe staff member appears to be simply annoyed by the situation, but the constant tapping of her foot and erratic movement")
     print("of her eyes reveal a person riddled with anxiety, possibly even fear. The police office tells you her name and position as")
@@ -361,7 +367,7 @@ def entranceB ():
             return entrance()
         elif choice52 == "B":
             #print("continue dialouge for the sake of turning the assignment in I will write later")
-            #suspicion +=1
+            raise_suspicion(1)
             input("\nPress Enter to go back")
             return entrance()
         elif choice52 == "C":
@@ -416,11 +422,13 @@ def dresser ():
 
 def dresserA ():
 
+    global scene_count
+
     # Scene 6.1: The Glass
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\n\nYou take your gloves out of your pocket and put them on before picking up the glass. There is still a small bit of milk")
     print("remaining at the bottom. Upon sniffing it, you smell the distinct smell of almonds, but it is not like almond milk. It is")
@@ -436,8 +444,8 @@ def dresserA ():
 
         if choice61 == "A":
             #print("write description for the sake of turning the assignment in I will write later")
-            #suspicion +=2
-            inventory.append("glass")
+            raise_suspicion(2)
+            player["inventory"].append("glass")
             input("\nPress Enter to go back")
             return dresser()
         elif choice61 == "B":
@@ -459,11 +467,13 @@ def dresserA ():
 
 def dresserB ():
 
+    global scene_count
+
     # Scene 6.2: The Drawers
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\n\nYou start opening the drawers, look though them, and promptly close them once you see they are completely empty. Any personal")
     print("belongings in the room are in the suitcases, but something catches your eye as you look through the last drawer; there is a")
@@ -479,7 +489,7 @@ def dresserB ():
 
         if choice62 == "A":
             #print("write description for the sake of turning the assignment in I will write later")
-            inventory.append("paper")
+            player["inventory"].append("paper")
             input("\nPress Enter to go back")
             return dresser()
         elif choice62 == "B":
@@ -553,15 +563,15 @@ def safe ():
         # how do I write an if statement for something only showing up if item is in inventory even if another item is 
         # in the inventory how do inventories???
 
-        if choice71 == "A" and "paper" in inventory:
+        if choice71 == "A" and "paper" in player["inventory"]:
             #print("write description for the sake of turning the assignment in I will write later")
             code = input("\nEnter code: ")
             if code == "4514":
                 return diary()
             else:
-                print("\nIncorrect. Try again.")
+                print("\n\nIncorrect. Try again.")
                 return safe ()
-        elif choice71 == "A" and "paper" not in inventory:
+        elif choice71 == "A" and "paper" not in player["inventory"]:
             print("\nYou input a few codes but none of them are correct. Return once you find something that will help you input the right code.")
             input("\nPress Enter to go back")
             return closet()
@@ -582,11 +592,13 @@ def safe ():
 
 def diary ():
 
+    global scene_count
+
     # Scene 7.2: Diary
 
     # Description:
 
-    #scene_count +=1
+    scene_count +=1
 
     print("\n\nEntering the correct code and opening the safe reveals...a small diary. There does not seem to be anything else in the")
     print("safe; it is just the diary. Upon closer inspection, you see-printed in bold letters on the front of the diary-the")
@@ -602,14 +614,14 @@ def diary ():
 
         if choice72 == "A":
             #print("write description for the sake of turning the assignment in I will write later")
-            #suspicion +=2
-            inventory.append("diary")
+            raise_suspicion(2)
+            player["inventory"].append("diary")
             input("\nPress Enter to go back")
-            return safe()
+            return closet()
         elif choice72 == "B":
             #print("write description for the sake of turning the assignment in I will write later")
             input("\nPress Enter to go back")
-            return safe()
+            return closet()
         else:
             print("\nNot an option. Please enter A or B.")
 
@@ -649,9 +661,9 @@ def end ():
         choice8 = input("\nWhat will you do? ").upper()
 
         if choice8 == "A":
-            if suspicion <4:
+            if player["suspicion"] <4:
                 return end1()
-            elif suspicion >3 and inventory ["paper"]:
+            elif player["suspicion"] >3 and "glass" in player["inventory"] or "diary" in player["inventory"]:
                 return end2()
             else:
                 return end3()
@@ -692,9 +704,9 @@ def end2 ():
 
     # Scene 8.2: Ending 2
 
-    # Description: suspicion greater than or equal to 4, inventory not have glass or diary
+    # Description: suspicion greater than or equal to 4, inventory has glass and/or diary
     
-    #print("I have to rewrite this cus I realized the inventory served no purpose otherwise I will write later I just wanna turn the 
+    print("I have to rewrite this cus I realized the inventory served no purpose otherwise I will write later I just wanna turn the")
     # assignment in right now mate"
 
     print("\nYou were caught.\n")
@@ -703,7 +715,7 @@ def end3 ():
 
     # Scene 8.3: Ending 3
 
-    # Description suspicion greater than or equal to 4, inventory has glass and/or diary
+    # Description suspicion greater than or equal to 4, inventory not have glass and/or diary
 
     #print("gonna write this later hope this is fine for now just can't do it tonight brain hurt from variables no work
     # wow this is over 700 lines of code already my goodness and it's just gonna get longer hope it's not too bad
@@ -711,6 +723,5 @@ def end3 ():
 
     print("\nYou were caught.\n")
 
-# to start the game mwahahahaha this'll only play the intro, body, and room scenes though cus idk how do to do what I
-# want to move on to the rest boooooo
+# to start the game mwahahahaha
 intro ()
