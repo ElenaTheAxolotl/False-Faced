@@ -43,9 +43,9 @@ def dresserA():
 
     global scene_count
 
-    from index import scene_count
-    from index import raise_suspicion
-    from index import player
+    from state import scene_count
+    from state import raise_suspicion
+    from state import player
 
     # Scene 6.1: The Glass
 

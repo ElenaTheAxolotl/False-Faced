@@ -44,8 +44,8 @@ def young_man_conversation():
 
     global scene_count
 
-    from index import scene_count
-    from index import raise_suspicion
+    from state import scene_count
+    from state import raise_suspicion
 
     # Scene 5.1: The Young Man
 
@@ -100,8 +100,8 @@ def staff_member_conversation():
 
     global scene_count
 
-    from index import scene_count
-    from index import raise_suspicion
+    from state import scene_count
+    from state import raise_suspicion
 
     # Scene 5.2: The Staff Member
 

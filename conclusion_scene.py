@@ -4,7 +4,7 @@
 def conclusion():
 
     from navigation_scene import navigate_to_other_scenes_scene
-    from index import player
+    from state import player
     from endings import ending1
     from endings import ending2
     from endings import ending3

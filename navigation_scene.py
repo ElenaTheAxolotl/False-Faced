@@ -3,7 +3,7 @@
 
 def navigate_to_other_scenes_scene():
 
-    from index import scene_count
+    from state import scene_count
     from examine_dresser import dresser
     from examine_closet import closet
     from interactions_at_room_entrance import entrance

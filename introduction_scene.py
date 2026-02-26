@@ -3,11 +3,11 @@
 
 def intro():
 
-    from index import scene_count
+    from state import scene_count
     from examine_body import body
     from examine_room import room
     from navigation_scene import navigate_to_other_scenes_scene
-    from index import player
+    from state import player
 
     print(scene_count)
     print(player)
@@ -15,7 +15,7 @@ def intro():
 
     # Description: 
 
-    print("\n\nYou stand in the middle of a hotel room, one barely big enough to fit two beds let alone the amount of people currently")
+    print("\n\n\nYou stand in the middle of a hotel room, one barely big enough to fit two beds let alone the amount of people currently")
     print("inspecting it. The most notable part of the room is on the bed nearest to the window. There, under a plastice sheet, lies")
     print("a dead body. It is heavily suspected that foul play is involved. You, the leading detective on this case, must figure out")
     print("what happened to the deceased.\n")

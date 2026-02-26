@@ -3,17 +3,15 @@
 
 def room():
 
-    global scene_count
-
-    from index import scene_count
+    import state
     from introduction_scene import intro
-    from index import raise_suspicion
+    from state import raise_suspicion
 
     # Scene 3: The Room
 
     # Description:
 
-    scene_count =+ 1
+    state.scene_count + 1
 
     print("\n\nLooking around the room, there is not much to see. A few forensics workers are looking for evidence, but the room is")
     print("practically bare, the only furniture being the two beds, a television, and a dresser below the television. There are two")

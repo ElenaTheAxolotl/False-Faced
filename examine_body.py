@@ -3,18 +3,16 @@
 
 def body():
 
-    global scene_count
-
-    from index import scene_count
+    import state
     from introduction_scene import intro
-    from index import raise_suspicion
+    from state import raise_suspicion
 
 
     # Scene 2: The Body
 
     # Description:
 
-    scene_count =+ 1
+    state.scene_count + 1
 
     print("\nThe deceased is a young man named Lucas Park, a nobody in the grand scheme of things. The file on him you were provided")
     print("with revealed nothing substantial. The only things of note were that he had no known living relatives and had been")

@@ -37,7 +37,7 @@ def closet():
 
 def safe():
 
-    from index import player
+    from state import player
 
     # Scene 7.1: The Safe
 
@@ -89,9 +89,9 @@ def diary():
 
     global scene_count
 
-    from index import scene_count
-    from index import raise_suspicion
-    from index import player
+    from state import scene_count
+    from state import raise_suspicion
+    from state import player
 
     # Scene 7.2: Diary
 
